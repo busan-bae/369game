@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>코알누 대학엠티</h1>
-        <h1>술게임</h1>
-        <h1>죽음의 업& 다운</h1>
-        <div>
-            <img src="#" />
-            <h1>죽기 싫다면 맞춰라</h1>
+        <h1 class="pre-title">코알누 대학엠티</h1>
+        <h1 class="tilte">술게임</h1>
+        <h1 class="sub-tilte"><span class="red-color">죽음</span>의 업 & 다운</h1>
+        <div> <!--결과가 나온다.-->
+            <img class="result-img" src="https://media.giphy.com/media/25LbA5gcDNM5N7sHHy/giphy.gif?cid=ecf05e47dlkoan2ggiyw3gy869et9rj4es5lwxtzahslch00&ep=v1_gifs_related&rid=giphy.gif&ct=g" />
+            <h1 class="result-text">죽기 싫다면 맞춰라</h1>
         </div>
-        <h2>남은기회 : 3</h2>
-        <input type="number" id="input-box" placeholder="1부터 100까지 숫자를 입력"/>
-        <button id="go-btn">Go!</button>
+        <h2 class="chance-area">남은기회 : 3</h2>
+        <div class="row">
+            <span class="col-md-6">
+                <input type="number" id="input-box" placeholder="1부터 100까지 숫자를 입력"/>
+            </span>
+            <span class="col-md-2">
+                <button class = "btn-style" id="go-btn">Go!</button>
+            </span>
+        </div>
     </div>
     <div class="reset-box mt-3">
-        <button>리셋</button>
+        <button class = "btn-style" id="reset-btn">리셋</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="main.js"></script>

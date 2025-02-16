@@ -3,7 +3,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-
+    font-family: "Black Han Sans", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
@@ -16,4 +18,56 @@ body {
 .reset-box {
     display: flex;
     justify-content: center;
+}
+
+.btn-style {
+    height: 80px;
+    width: 100px;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+#input-box{
+    height: 80px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.row { 
+    justify-content: center;
+}
+
+.result-img {
+    width: 40vw;
+    height: 30vh;
+}
+
+
+@media screen and (max-width: 48rem) {
+    .result-img {
+        width: 40vw;
+    }
+}
+
+.pre-title { 
+    color: blue;
+    font-size: 5vw;
+}
+
+.tilte {
+    font-size: 7vw;
+}
+
+.sub-title {
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.red-color {
+    color: red;
 }
