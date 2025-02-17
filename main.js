@@ -25,6 +25,7 @@ inputBox.addEventListener("focus",focusInput)
 function randomNum(){
    answer =  Math.floor(Math.random()*100) + 1
    console.log("정답:",answer)
+   chanceArea.innerHTML = `남은 기회: ${chances} (정답: ${answer}) (입력:${userValueList})`
    return answer
 }
 
@@ -60,7 +61,7 @@ function numberGame(){
     }
 
     chances -= 1
-    chanceArea.innerHTML = `남은 기회: ${chances}`
+    chanceArea.innerHTML = `남은 기회: ${chances} (정답: ${answer}) (입력:${userValueList})`
 
 }
 
@@ -72,11 +73,12 @@ function focusInput(){
 function reset(){
     resultText.textContent = "죽기 싫다면 맞춰라"
     chances = 3;
-    chanceArea.innerHTML = `남은 기회: ${chances}`
+    randomNum()
+    focusInput()
     userValueList = []
     goBtn.disabled = false;
-    randomNum()
     resultImg.src ="https://media.giphy.com/media/25LbA5gcDNM5N7sHHy/giphy.gif?cid=ecf05e47dlkoan2ggiyw3gy869et9rj4es5lwxtzahslch00&ep=v1_gifs_related&rid=giphy.gif&ct=g"
+    chanceArea.innerHTML = `남은 기회: ${chances} (정답: ${answer}) (입력:${userValueList})`
 }
 
 randomNum()
