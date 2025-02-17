@@ -53,14 +53,14 @@ function numberGame(){
         resultText.textContent = "up!"
     }
 
-    chances -= 1
-    chanceArea.innerHTML = `남은 기회: ${chances}`
-
     if(chances === 0){
         resultText.textContent = "다시한번 시도하세요!"
         goBtn.disabled = true;
         resultImg.src ="https://media.giphy.com/media/eCUKKmVrVN5FSvNIW7/giphy.gif?cid=ecf05e47yvy4mfptp9xr41c3z22c3lp1dexho0t2quw5psm8&ep=v1_gifs_related&rid=giphy.gif&ct=g"
     }
+
+    chances -= 1
+    chanceArea.innerHTML = `남은 기회: ${chances}`
 
 }
 
