@@ -42,10 +42,15 @@ function numberGame(){
     userValueList.push(inputNum)
 
     console.log(inputNum)
+    chances -= 1
+    chanceArea.innerHTML = `남은 기회: ${chances} (정답: ${answer}) (입력:${userValueList})`
+
+
     if(inputNum === answer){
         resultText.textContent = "정답!"
         goBtn.disabled = true;
         resultImg.src ="https://media.giphy.com/media/3zMJLjPO5nVCj9n0gc/giphy.gif?cid=790b7611ss6tlyy8teo5ng4jrd78yyg7eyc9ux9uwj557qka&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        return
     } else if (inputNum > answer){
         resultText.textContent = "Down!"
         resultImg.src = "https://media.giphy.com/media/Js7cqIkpxFy0bILFFA/giphy.gif?cid=790b7611ngoa950uzizdzug1qd3ubkwzc4t2sz17ciywjg0a&ep=v1_gifs_search&rid=giphy.gif&ct=g"
@@ -54,16 +59,16 @@ function numberGame(){
         resultText.textContent = "up!"
     }
 
-    if(chances === 1){
+    if(chances === 0){
         resultText.textContent = "다시한번 시도하세요!"
         goBtn.disabled = true;
         resultImg.src ="https://media.giphy.com/media/eCUKKmVrVN5FSvNIW7/giphy.gif?cid=ecf05e47yvy4mfptp9xr41c3z22c3lp1dexho0t2quw5psm8&ep=v1_gifs_related&rid=giphy.gif&ct=g"
     }
 
-    chances -= 1
-    chanceArea.innerHTML = `남은 기회: ${chances} (정답: ${answer}) (입력:${userValueList})`
-
 }
+
+
+
 
 function focusInput(){
     inputBox.value = ""
