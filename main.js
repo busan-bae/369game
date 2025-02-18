@@ -54,7 +54,7 @@ function numberGame(){
         resultText.textContent = "up!"
     }
 
-    if(chances === 0){
+    if(chances === 1){
         resultText.textContent = "다시한번 시도하세요!"
         goBtn.disabled = true;
         resultImg.src ="https://media.giphy.com/media/eCUKKmVrVN5FSvNIW7/giphy.gif?cid=ecf05e47yvy4mfptp9xr41c3z22c3lp1dexho0t2quw5psm8&ep=v1_gifs_related&rid=giphy.gif&ct=g"
